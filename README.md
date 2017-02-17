@@ -1,8 +1,8 @@
-# 金山云Android HTTPCache SDK
-金山云ios平台http缓存SDK，可方便地与播放器集成，实现http视频边播放边下载（缓存）功能。ksyun http cache sdk for ios platform, it's easy to integrated with media players to provide caching capability when watching http videos.
+# 金山云iOs HTTPCache SDK
+金山云iOS平台http缓存SDK，可方便地与播放器集成，实现http视频边播放边下载（缓存）功能。ksyun http cache sdk for ios platform, it's easy to integrated with media players to provide caching capability when watching http videos.
 
 ## 1. 产品概述
-金山云ios HTTPCache SDK可以方便地和播放器进行集成，提供对HTTP视频边播放缓存的功能，缓存完成的内容可以离线工作。
+金山云iOS HTTPCache SDK可以方便地和播放器进行集成，提供对HTTP视频边播放缓存的功能，缓存完成的内容可以离线工作。
 
 KSY HTTPCache与播放器及视频服务器的关系如下图：
 ![](https://github.com/sujia/image_foder/blob/master/ksy_http_cache.png)
