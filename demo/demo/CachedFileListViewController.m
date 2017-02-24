@@ -128,8 +128,8 @@
     
     NSDictionary* dict = [self.cachedFiles objectAtIndex:row];
     NSString* urlString = dict[CacheURLKey];
-    urlString = [[KSYHTTPProxyService sharedInstance] getProxyUrl:urlString];
-    
+    //urlString = [[KSYHTTPProxyService sharedInstance] getProxyUrl:urlString];
+    urlString = [[KSYHTTPProxyService sharedInstance] getProxyUrl:urlString newCache:NO];
     NSURL* url = [NSURL URLWithString:urlString];
     
     [self presentViewController:[[KSYPlayerVC alloc] initWithURL:url] animated:YES completion:nil];

@@ -110,11 +110,11 @@
     
     long long cacheLength = cachedFragments[0].rangeValue.length;
     cacheProgress = (float)cacheLength / (float)contentLength;
-    NSLog(@"url %@, cache length %llu, content length %llu, cacheProgress %@", userInfo[CacheURLKey], cacheLength, contentLength, [NSNumber numberWithFloat:cacheProgress]);
+    NSLog(@"url %@, cache length %llu, content length %llu, cacheProgress %f", userInfo[CacheURLKey], cacheLength, contentLength, cacheProgress);
     
     [cachedFragments enumerateObjectsUsingBlock:^(NSValue * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSRange range = obj.rangeValue;
-        NSLog(@"cached framegent %lu , range: %@", (unsigned long)idx, NSStringFromRange(range));
+        NSLog(@"cached framegent %d , range: [%d, %d]", idx, range.location, (range.location + range.length -1 ));
     }];
 }
 

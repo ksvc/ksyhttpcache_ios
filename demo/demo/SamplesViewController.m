@@ -35,7 +35,8 @@
 -(NSMutableArray*)getNameAndProxyUrl:(NSString*)url {
     NSMutableArray* array = [[NSMutableArray alloc] init];
     [array addObject:[url lastPathComponent]];
-    [array addObject: [[KSYHTTPProxyService sharedInstance] getProxyUrl:url]];
+    //[array addObject: [[KSYHTTPProxyService sharedInstance] getProxyUrl:url]];
+    [array addObject: [[KSYHTTPProxyService sharedInstance] getProxyUrl:url newCache:YES]];
     return array;
 }
 
@@ -49,10 +50,12 @@
 
 -(void)initTableView {
     NSMutableArray *sampleList = [[NSMutableArray alloc] init];
-    [sampleList addObject:[self getNameAndProxyUrl:@"http://ks3-cn-beijing.ksyun.com/mobile/S09E18.mp4"]];
-    [sampleList addObject:[self getNameAndProxyUrl:@"https://mvvideo5.meitudata.com/571090934cea5517.mp4"]];
-    [sampleList addObject:[self getNameAndProxyUrl:@"http://maichang.kssws.ks-cdn.com/upload20150716161913.mp4"]];
-    [sampleList addObject:[self getNameAndProxyUrl:@"http://eflakee.kss.ksyun.com/MP4/My%20Love.mp4"]];
+    [sampleList addObject:[self getNameAndUrl:@"http://ks3-cn-beijing.ksyun.com/mobile/S09E20.mp4"]];
+    [sampleList addObject:[self getNameAndUrl:@"http://kss.ksyun.com/eflakee/FLV/15702274_1474868965.flv"]];
+    [sampleList addObject:[self getNameAndUrl:@"http://mpvideo-test.b0.upaiyun.com/5813998fb092e5771.mp4"]];
+    [sampleList addObject:[self getNameAndUrl:@"https://mvvideo5.meitudata.com/571090934cea5517.mp4"]];
+    [sampleList addObject:[self getNameAndUrl:@"http://test.live.ksyun.com/live/76C1.flv"]];
+    [sampleList addObject:[self getNameAndUrl:@"http://zbvideo.ks3-cn-beijing.ksyun.com/record/live/101743_1466076252/hls/101743_1466076252.m3u8"]];
     self.sampleList_withhttpcache = sampleList;
     
     NSMutableArray *sampleList2 = [[NSMutableArray alloc] init];
@@ -162,9 +165,24 @@
     } else {
         item = self.sampleList_withouthttpcache[row];
     }
-    NSURL   *url  = [NSURL URLWithString:item[1]];
     
-    [self presentViewController:[[KSYPlayerVC alloc] initWithURL:url] animated:YES completion:nil];
+    UITableViewCell *cell  = [tableView cellForRowAtIndexPath:indexPath];
+    cell.userInteractionEnabled = NO;
+    //NSString *strUrl = [[KSYHTTPProxyService sharedInstance] getProxyUrl:item[1] newCache:YES];
+    //NSURL   *url  = [NSURL URLWithString:strUrl];
+    //[self presentViewController:[[KSYPlayerVC alloc] initWithURL:url] animated:YES completion:nil];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
+        NSString *strUrl = [[KSYHTTPProxyService sharedInstance] getProxyUrl:item[1] newCache:YES];
+        NSURL   *url  = [NSURL URLWithString:strUrl];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self presentViewController:[[KSYPlayerVC alloc] initWithURL:url] animated:YES
+                             completion:^(void){
+                                 cell.userInteractionEnabled = YES;
+            }];
+        });
+        
+    });
+    
 }
 
 - (void)didReceiveMemoryWarning {
