@@ -113,12 +113,10 @@ KSYMoviePlayerController *player = [[KSYMoviePlayerController alloc] initWithCon
 
 对于http flv直播，如果播放器通过接口getProxyUrl( ur）获得播放地址，播放行为是：首次播放，边播放边缓存；以后播放相同url，则是回看缓存好的视频。
 而如果播放器通过getProxyUrl(url, newCache)获得播放地址，播放行为是：newCache参数为true，无论是否有url对应的缓存内容，都是播放并缓存新的直播内容。newCache为false，如果有url对应的缓存内容（命中缓存），播放时回看已缓存的直播内容；没有命中的缓存视频（未命中缓存），则播放并缓存新的直播内容。
-获取代理后的播放地址
+
 ```objectivec
 (NSString*)getProxyUrl:(NSString*)url newCache:(BOOL)newCache;
 ```
-
-获取代理后的播放地址
 ```objectivec
 (NSString*)getProxyUrl:(NSString*)url;
 ```
