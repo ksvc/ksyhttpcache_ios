@@ -19,6 +19,8 @@ extern NSString *CacheFilePathKey;
 
 extern NSString *CacheErrorCodeKey;
 
+extern NSString *CacheSDKVersion; //当前KSYHTTPCacheSDK版本号
+
 /**
  * 错误码
  */

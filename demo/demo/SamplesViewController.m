@@ -56,6 +56,8 @@
     [sampleList addObject:[self getNameAndUrl:@"https://mvvideo5.meitudata.com/571090934cea5517.mp4"]];
     [sampleList addObject:[self getNameAndUrl:@"http://test.live.ksyun.com/live/76C1.flv"]];
     [sampleList addObject:[self getNameAndUrl:@"http://zbvideo.ks3-cn-beijing.ksyun.com/record/live/101743_1466076252/hls/101743_1466076252.m3u8"]];
+    [sampleList addObject:[self getNameAndUrl:@"http://101.96.8.164/1252759537.vod2.myqcloud.com/fe84f2a6vodsgp1252759537/7a1649e89031868222946874301/f0.mp4"]];
+    [sampleList addObject:[self getNameAndUrl:@"http://test.live.ks-cdn.com/live/sunyazhou.flv"]];
     self.sampleList_withhttpcache = sampleList;
     
     NSMutableArray *sampleList2 = [[NSMutableArray alloc] init];
