@@ -1,6 +1,6 @@
 
 Pod::Spec.new do |s|
-  s.name         = 'ksyhttpcache_ios'
+  s.name         = 'ksyhttpcache'
   s.version      = '1.0.3'
   s.license      = {
 :type => 'Proprietary',
