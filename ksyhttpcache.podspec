@@ -15,7 +15,10 @@ Pod::Spec.new do |s|
       * 金山云ios平台http缓存SDK，可方便地与播放器集成，实现http视频边播放边下载（缓存）功能。
       * ksyun http cache sdk for ios platform, it's easy to integrated with media players to provide caching capability when watching http videos.
   DESC
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '8.0'
+  s.ios.deployment_target = '8.0'
+  
+
   s.requires_arc = true
   s.source       = { 
     :git => 'https://github.com/ksvc/ksyhttpcache_ios.git', 
@@ -24,4 +27,7 @@ Pod::Spec.new do |s|
   s.dependency 'CocoaAsyncSocket'
   s.dependency 'CocoaLumberjack'
   s.vendored_frameworks = 'framework/KSYHTTPCache.framework'
+  s.allow_warnings = 'skip-import-validation'
+
+
 end
