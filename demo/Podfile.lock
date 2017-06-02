@@ -6,18 +6,23 @@ PODS:
   - CocoaLumberjack/Default (3.2.0)
   - CocoaLumberjack/Extensions (3.2.0):
     - CocoaLumberjack/Default
-  - KSYMediaPlayer_iOS (2.2.0)
+  - ksyhttpcache (1.0.6):
+    - CocoaAsyncSocket
+    - CocoaLumberjack
+  - KSYMediaPlayer_iOS (2.3.0)
 
 DEPENDENCIES:
   - CocoaAsyncSocket
   - CocoaLumberjack
+  - ksyhttpcache
   - KSYMediaPlayer_iOS
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: 7eadd3f59e1a6c84e2aefc93e9ff7b55156fe174
   CocoaLumberjack: 9b4aed7073d242f29cc2f62068d995faf67f703a
-  KSYMediaPlayer_iOS: c51d5440bfd17b4caea3c53a3b34ba1af42d97c5
+  ksyhttpcache: ce53678b72b93939d26f9942e35444c09e859d9d
+  KSYMediaPlayer_iOS: abc0b3c779bf4ae5449d58f1e97fc8a0de216d2c
 
-PODFILE CHECKSUM: 176926f0f0dd92a6d60406808337bc1af03f61a1
+PODFILE CHECKSUM: b00a55b09692075253f47f3b2009b93ae9d64f32
 
 COCOAPODS: 1.2.1

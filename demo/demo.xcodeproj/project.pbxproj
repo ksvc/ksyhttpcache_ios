@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B05561391DD9612700130251 /* KSYHTTPCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B05561371DD9611C00130251 /* KSYHTTPCache.framework */; };
-		B055613A1DD9612700130251 /* KSYHTTPCache.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B05561371DD9611C00130251 /* KSYHTTPCache.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B055613B1DD9618800130251 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E45AA41DD59C8200D48A5E /* libstdc++.6.tbd */; };
 		B0E45A691DD59AC600D48A5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E45A681DD59AC600D48A5E /* main.m */; };
 		B0E45A6C1DD59AC600D48A5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E45A6B1DD59AC600D48A5E /* AppDelegate.m */; };
@@ -35,7 +33,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B055613A1DD9612700130251 /* KSYHTTPCache.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,7 +42,6 @@
 /* Begin PBXFileReference section */
 		598BF960746929913E260A37 /* Pods-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.release.xcconfig"; sourceTree = "<group>"; };
 		6676BC4134554BD0DEA09751 /* Pods-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.debug.xcconfig"; sourceTree = "<group>"; };
-		B05561371DD9611C00130251 /* KSYHTTPCache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KSYHTTPCache.framework; sourceTree = "<group>"; };
 		B0E45A641DD59AC600D48A5E /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E45A681DD59AC600D48A5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B0E45A6A1DD59AC600D48A5E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,7 +77,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B055613B1DD9618800130251 /* libstdc++.6.tbd in Frameworks */,
-				B05561391DD9612700130251 /* KSYHTTPCache.framework in Frameworks */,
 				B0E45AA31DD59C6E00D48A5E /* libbz2.tbd in Frameworks */,
 				B0E45AA11DD59C5500D48A5E /* libz.tbd in Frameworks */,
 				B0E45A9F1DD59C2600D48A5E /* VideoToolbox.framework in Frameworks */,
@@ -104,7 +99,6 @@
 		B0E45A5B1DD59AC600D48A5E = {
 			isa = PBXGroup;
 			children = (
-				B05561371DD9611C00130251 /* KSYHTTPCache.framework */,
 				B0E45A661DD59AC600D48A5E /* demo */,
 				B0E45A651DD59AC600D48A5E /* Products */,
 				B0E45A9D1DD59C2600D48A5E /* Frameworks */,

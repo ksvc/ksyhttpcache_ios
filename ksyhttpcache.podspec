@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = 'ksyhttpcache'
-  s.version      = '1.0.6'
+  s.version      = '1.0.7'
   s.license      = {
 :type => 'Proprietary',
 :text => <<-LICENSE
@@ -15,8 +15,8 @@ Pod::Spec.new do |s|
       * 金山云ios平台http缓存SDK，可方便地与播放器集成，实现http视频边播放边下载（缓存）功能。
       * ksyun http cache sdk for ios platform, it's easy to integrated with media players to provide caching capability when watching http videos.
   DESC
-  s.platform     = :ios, '8.0'
-  s.ios.deployment_target = '8.0'
+  s.platform     = :ios, '7.0'
+  s.ios.deployment_target = '7.0'
   
 
   s.requires_arc = true
