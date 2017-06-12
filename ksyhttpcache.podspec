@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = 'ksyhttpcache'
-  s.version      = '1.0.10'
+  s.version      = '1.0.11'
   s.license      = {
 :type => 'Proprietary',
 :text => <<-LICENSE

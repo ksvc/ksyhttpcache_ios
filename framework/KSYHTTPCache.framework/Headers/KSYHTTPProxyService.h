@@ -125,4 +125,13 @@
  */
 -(NSArray*)getCacheFragmentForUrl:(NSURL *)url error:(NSError **)error;
 
+
+/**
+ 发送http请求时需要header带上的字段
+ 必须 key:value 都是NSString类型
+ @param headers 请求头带的字段
+ */
+-(void)setHttpHeaders:(NSDictionary<NSString *,NSString *> *)headers;
+
+
 @end
