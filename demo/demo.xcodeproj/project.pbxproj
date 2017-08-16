@@ -9,21 +9,22 @@
 /* Begin PBXBuildFile section */
 		B055613B1DD9618800130251 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E45AA41DD59C8200D48A5E /* libstdc++.6.tbd */; };
 		B0E45A691DD59AC600D48A5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E45A681DD59AC600D48A5E /* main.m */; };
-		B0E45A6C1DD59AC600D48A5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E45A6B1DD59AC600D48A5E /* AppDelegate.m */; };
-		B0E45A6F1DD59AC600D48A5E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E45A6E1DD59AC600D48A5E /* ViewController.m */; };
 		B0E45A721DD59AC600D48A5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E45A701DD59AC600D48A5E /* Main.storyboard */; };
 		B0E45A741DD59AC600D48A5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E45A731DD59AC600D48A5E /* Assets.xcassets */; };
 		B0E45A771DD59AC600D48A5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E45A751DD59AC600D48A5E /* LaunchScreen.storyboard */; };
-		B0E45A861DD59B6B00D48A5E /* CachedFileListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E45A7F1DD59B6B00D48A5E /* CachedFileListViewController.m */; };
-		B0E45A871DD59B6B00D48A5E /* KSYPlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E45A811DD59B6B00D48A5E /* KSYPlayerVC.m */; };
-		B0E45A881DD59B6B00D48A5E /* KSYProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E45A831DD59B6B00D48A5E /* KSYProgressView.m */; };
-		B0E45A891DD59B6B00D48A5E /* SamplesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E45A851DD59B6B00D48A5E /* SamplesViewController.m */; };
 		B0E45A9F1DD59C2600D48A5E /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E45A9E1DD59C2600D48A5E /* VideoToolbox.framework */; };
 		B0E45AA11DD59C5500D48A5E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E45AA01DD59C5500D48A5E /* libz.tbd */; };
 		B0E45AA31DD59C6E00D48A5E /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E45AA21DD59C6E00D48A5E /* libbz2.tbd */; };
-		B0E45AAC1DD5BB2100D48A5E /* CachingFileListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E45AAB1DD5BB2100D48A5E /* CachingFileListViewController.m */; };
 		B0E45AB01DD81EF500D48A5E /* CacheSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E45AAE1DD81EF500D48A5E /* CacheSettingsViewController.m */; };
 		BA37E84ADE949AB7B78DFE51 /* libPods-demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD25BFF990FD53F68662F7A /* libPods-demo.a */; };
+		F0EA9F871F440969001BE20A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EA9F781F440969001BE20A /* AppDelegate.m */; };
+		F0EA9F881F440969001BE20A /* CachedFileListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EA9F7A1F440969001BE20A /* CachedFileListViewController.m */; };
+		F0EA9F891F440969001BE20A /* CachingFileListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EA9F7C1F440969001BE20A /* CachingFileListViewController.m */; };
+		F0EA9F8A1F440969001BE20A /* KSYPlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EA9F7E1F440969001BE20A /* KSYPlayerVC.m */; };
+		F0EA9F8B1F440969001BE20A /* KSYProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EA9F801F440969001BE20A /* KSYProgressView.m */; };
+		F0EA9F8C1F440969001BE20A /* SamplesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EA9F821F440969001BE20A /* SamplesViewController.m */; };
+		F0EA9F8D1F440969001BE20A /* ShowFileDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EA9F841F440969001BE20A /* ShowFileDownloader.m */; };
+		F0EA9F8E1F440969001BE20A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EA9F861F440969001BE20A /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,31 +45,33 @@
 		6676BC4134554BD0DEA09751 /* Pods-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.debug.xcconfig"; sourceTree = "<group>"; };
 		B0E45A641DD59AC600D48A5E /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E45A681DD59AC600D48A5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B0E45A6A1DD59AC600D48A5E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		B0E45A6B1DD59AC600D48A5E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B0E45A6D1DD59AC600D48A5E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B0E45A6E1DD59AC600D48A5E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B0E45A711DD59AC600D48A5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B0E45A731DD59AC600D48A5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0E45A761DD59AC600D48A5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0E45A781DD59AC700D48A5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B0E45A7E1DD59B6B00D48A5E /* CachedFileListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CachedFileListViewController.h; sourceTree = "<group>"; };
-		B0E45A7F1DD59B6B00D48A5E /* CachedFileListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CachedFileListViewController.m; sourceTree = "<group>"; };
-		B0E45A801DD59B6B00D48A5E /* KSYPlayerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSYPlayerVC.h; sourceTree = "<group>"; };
-		B0E45A811DD59B6B00D48A5E /* KSYPlayerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSYPlayerVC.m; sourceTree = "<group>"; };
-		B0E45A821DD59B6B00D48A5E /* KSYProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSYProgressView.h; sourceTree = "<group>"; };
-		B0E45A831DD59B6B00D48A5E /* KSYProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSYProgressView.m; sourceTree = "<group>"; };
-		B0E45A841DD59B6B00D48A5E /* SamplesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SamplesViewController.h; sourceTree = "<group>"; };
-		B0E45A851DD59B6B00D48A5E /* SamplesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SamplesViewController.m; sourceTree = "<group>"; };
 		B0E45A9E1DD59C2600D48A5E /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		B0E45AA01DD59C5500D48A5E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		B0E45AA21DD59C6E00D48A5E /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		B0E45AA41DD59C8200D48A5E /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
-		B0E45AAA1DD5BB2100D48A5E /* CachingFileListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CachingFileListViewController.h; sourceTree = "<group>"; };
-		B0E45AAB1DD5BB2100D48A5E /* CachingFileListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CachingFileListViewController.m; sourceTree = "<group>"; };
 		B0E45AAD1DD81EF500D48A5E /* CacheSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheSettingsViewController.h; sourceTree = "<group>"; };
 		B0E45AAE1DD81EF500D48A5E /* CacheSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheSettingsViewController.m; sourceTree = "<group>"; };
 		BDD25BFF990FD53F68662F7A /* libPods-demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0EA9F771F440969001BE20A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F0EA9F781F440969001BE20A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F0EA9F791F440969001BE20A /* CachedFileListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CachedFileListViewController.h; sourceTree = "<group>"; };
+		F0EA9F7A1F440969001BE20A /* CachedFileListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CachedFileListViewController.m; sourceTree = "<group>"; };
+		F0EA9F7B1F440969001BE20A /* CachingFileListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CachingFileListViewController.h; sourceTree = "<group>"; };
+		F0EA9F7C1F440969001BE20A /* CachingFileListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CachingFileListViewController.m; sourceTree = "<group>"; };
+		F0EA9F7D1F440969001BE20A /* KSYPlayerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSYPlayerVC.h; sourceTree = "<group>"; };
+		F0EA9F7E1F440969001BE20A /* KSYPlayerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSYPlayerVC.m; sourceTree = "<group>"; };
+		F0EA9F7F1F440969001BE20A /* KSYProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSYProgressView.h; sourceTree = "<group>"; };
+		F0EA9F801F440969001BE20A /* KSYProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSYProgressView.m; sourceTree = "<group>"; };
+		F0EA9F811F440969001BE20A /* SamplesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SamplesViewController.h; sourceTree = "<group>"; };
+		F0EA9F821F440969001BE20A /* SamplesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SamplesViewController.m; sourceTree = "<group>"; };
+		F0EA9F831F440969001BE20A /* ShowFileDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowFileDownloader.h; sourceTree = "<group>"; };
+		F0EA9F841F440969001BE20A /* ShowFileDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowFileDownloader.m; sourceTree = "<group>"; };
+		F0EA9F851F440969001BE20A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F0EA9F861F440969001BE20A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,20 +120,22 @@
 		B0E45A661DD59AC600D48A5E /* demo */ = {
 			isa = PBXGroup;
 			children = (
-				B0E45A841DD59B6B00D48A5E /* SamplesViewController.h */,
-				B0E45A851DD59B6B00D48A5E /* SamplesViewController.m */,
-				B0E45A7E1DD59B6B00D48A5E /* CachedFileListViewController.h */,
-				B0E45A7F1DD59B6B00D48A5E /* CachedFileListViewController.m */,
-				B0E45AAA1DD5BB2100D48A5E /* CachingFileListViewController.h */,
-				B0E45AAB1DD5BB2100D48A5E /* CachingFileListViewController.m */,
-				B0E45A801DD59B6B00D48A5E /* KSYPlayerVC.h */,
-				B0E45A811DD59B6B00D48A5E /* KSYPlayerVC.m */,
-				B0E45A821DD59B6B00D48A5E /* KSYProgressView.h */,
-				B0E45A831DD59B6B00D48A5E /* KSYProgressView.m */,
-				B0E45A6A1DD59AC600D48A5E /* AppDelegate.h */,
-				B0E45A6B1DD59AC600D48A5E /* AppDelegate.m */,
-				B0E45A6D1DD59AC600D48A5E /* ViewController.h */,
-				B0E45A6E1DD59AC600D48A5E /* ViewController.m */,
+				F0EA9F771F440969001BE20A /* AppDelegate.h */,
+				F0EA9F781F440969001BE20A /* AppDelegate.m */,
+				F0EA9F791F440969001BE20A /* CachedFileListViewController.h */,
+				F0EA9F7A1F440969001BE20A /* CachedFileListViewController.m */,
+				F0EA9F7B1F440969001BE20A /* CachingFileListViewController.h */,
+				F0EA9F7C1F440969001BE20A /* CachingFileListViewController.m */,
+				F0EA9F7D1F440969001BE20A /* KSYPlayerVC.h */,
+				F0EA9F7E1F440969001BE20A /* KSYPlayerVC.m */,
+				F0EA9F7F1F440969001BE20A /* KSYProgressView.h */,
+				F0EA9F801F440969001BE20A /* KSYProgressView.m */,
+				F0EA9F811F440969001BE20A /* SamplesViewController.h */,
+				F0EA9F821F440969001BE20A /* SamplesViewController.m */,
+				F0EA9F831F440969001BE20A /* ShowFileDownloader.h */,
+				F0EA9F841F440969001BE20A /* ShowFileDownloader.m */,
+				F0EA9F851F440969001BE20A /* ViewController.h */,
+				F0EA9F861F440969001BE20A /* ViewController.m */,
 				B0E45A701DD59AC600D48A5E /* Main.storyboard */,
 				B0E45A731DD59AC600D48A5E /* Assets.xcassets */,
 				B0E45A751DD59AC600D48A5E /* LaunchScreen.storyboard */,
@@ -291,15 +296,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0E45A861DD59B6B00D48A5E /* CachedFileListViewController.m in Sources */,
-				B0E45A6F1DD59AC600D48A5E /* ViewController.m in Sources */,
-				B0E45AAC1DD5BB2100D48A5E /* CachingFileListViewController.m in Sources */,
+				F0EA9F8D1F440969001BE20A /* ShowFileDownloader.m in Sources */,
+				F0EA9F881F440969001BE20A /* CachedFileListViewController.m in Sources */,
+				F0EA9F8A1F440969001BE20A /* KSYPlayerVC.m in Sources */,
+				F0EA9F891F440969001BE20A /* CachingFileListViewController.m in Sources */,
+				F0EA9F8E1F440969001BE20A /* ViewController.m in Sources */,
 				B0E45AB01DD81EF500D48A5E /* CacheSettingsViewController.m in Sources */,
-				B0E45A6C1DD59AC600D48A5E /* AppDelegate.m in Sources */,
-				B0E45A881DD59B6B00D48A5E /* KSYProgressView.m in Sources */,
 				B0E45A691DD59AC600D48A5E /* main.m in Sources */,
-				B0E45A891DD59B6B00D48A5E /* SamplesViewController.m in Sources */,
-				B0E45A871DD59B6B00D48A5E /* KSYPlayerVC.m in Sources */,
+				F0EA9F8B1F440969001BE20A /* KSYProgressView.m in Sources */,
+				F0EA9F8C1F440969001BE20A /* SamplesViewController.m in Sources */,
+				F0EA9F871F440969001BE20A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

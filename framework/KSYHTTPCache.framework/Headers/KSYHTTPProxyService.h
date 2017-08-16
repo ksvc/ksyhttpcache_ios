@@ -84,6 +84,11 @@
 -(NSString*)getProxyUrl:(NSString*)url;
 
 /**
+ * 获取原始播放地址
+ */
+- (NSString *)getOriginalUrl:(NSString *)url;
+
+/**
  * 获取代理后的播放地址
  */
 -(NSString*)getProxyUrl:(NSString*)url newCache:(BOOL)newCache;
@@ -124,7 +129,6 @@
  * 获得url对应缓存未完成url对应的cache fragment
  */
 -(NSArray*)getCacheFragmentForUrl:(NSURL *)url error:(NSError **)error;
-
 
 /**
  发送http请求时需要header带上的字段

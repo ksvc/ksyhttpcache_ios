@@ -11,11 +11,15 @@
 
 extern NSString *CacheStatusNotification;
 extern NSString *CacheErrorNotification;
+extern NSString *closePlayerNotification;
+extern NSString *OpenPlayerNotification;
 
 extern NSString *CacheURLKey;
 extern NSString *CacheFragmentsKey;
 extern NSString *CacheContentLengthKey;
 extern NSString *CacheFilePathKey;
+extern NSString *CacheProgressKey;
+extern NSString *ClosePlayerURLKey;
 
 extern NSString *CacheErrorCodeKey;
 
@@ -49,6 +53,25 @@ typedef NS_ENUM(NSInteger, KSYHTTPCacheErrorCode) {
 typedef NS_ENUM(NSInteger, KSYCacheStrategy) {
     MaxCacheSizeLimited    = 0,
     MaxFilesCountLimited    = 1,
+};
+
+/**
+ * 缓存任务的类型
+ */
+typedef NS_ENUM(NSInteger, KSYCacheTaskType) {
+    KSYCacheTaskTypeHttpServer        = 0,       // HttpServer发起的任务
+    KSYCacheTaskTypeFileDownloader    = 1,       // FileDownloader发起的任务
+};
+
+/**
+ * FileDownloader任务状态
+ */
+typedef NS_ENUM(NSInteger, KSYFileDownloaderState) {
+    KSYFileDownloaderStateUnknown      = 0,
+    KSYFileDownloaderStatePause,
+    KSYFileDownloaderStateDownloading,
+    KSYFileDownloaderStateInvalid,
+    KSYFileDownloaderStateFinished
 };
 
 #endif /* HTTPCacheDefines_h */

@@ -8,6 +8,8 @@
 
 #import "SamplesViewController.h"
 #import <KSYHTTPCache/KSYHTTPProxyService.h>
+#import "ShowFileDownloader.h"
+#import "KSYHTTPCache/HTTPCacheDefines.h"
 #import "KSYPlayerVC.h"
 
 #define IOS_NEWER_OR_EQUAL_TO_7 ( [ [ [ UIDevice currentDevice ] systemVersion ] floatValue ] >= 7.0 )
@@ -19,16 +21,19 @@
 @property(nonatomic,strong) NSArray *sampleList_withouthttpcache;
 @property(nonatomic,strong) UINavigationBar *nav;
 
+@property (nonatomic, strong) UILabel *progressLab;
+
+@property (nonatomic, strong) ShowFileDownloader *downloaderManager;
 @end
+
+static NSString * const toBeDownloadUrlStr = @"https://mvvideo5.meitudata.com/571090934cea5517.mp4";
 
 @implementation SamplesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     [self setNavigationbar];
-    
     [self initTableView];
 }
 
@@ -47,24 +52,32 @@
     return array;
 }
 
+- (ShowFileDownloader *)downloaderManager {
+    if (!_downloaderManager) {
+        _downloaderManager = [[ShowFileDownloader alloc] init];
+    }
+    return _downloaderManager;
+}
 
 -(void)initTableView {
     NSMutableArray *sampleList = [[NSMutableArray alloc] init];
-    [sampleList addObject:[self getNameAndUrl:@"http://ks3-cn-beijing.ksyun.com/mobile/S09E20.mp4"]];
-    [sampleList addObject:[self getNameAndUrl:@"http://kss.ksyun.com/eflakee/FLV/15702274_1474868965.flv"]];
-    [sampleList addObject:[self getNameAndUrl:@"http://mpvideo-test.b0.upaiyun.com/5813998fb092e5771.mp4"]];
-    [sampleList addObject:[self getNameAndUrl:@"https://mvvideo5.meitudata.com/571090934cea5517.mp4"]];
-    [sampleList addObject:[self getNameAndUrl:@"http://test.live.ksyun.com/live/76C1.flv"]];
-    [sampleList addObject:[self getNameAndUrl:@"http://zbvideo.ks3-cn-beijing.ksyun.com/record/live/101743_1466076252/hls/101743_1466076252.m3u8"]];
-    [sampleList addObject:[self getNameAndUrl:@"http://101.96.8.164/1252759537.vod2.myqcloud.com/fe84f2a6vodsgp1252759537/7a1649e89031868222946874301/f0.mp4"]];
-    [sampleList addObject:[self getNameAndUrl:@"http://test.live.ks-cdn.com/live/sunyazhou.flv"]];
+    [sampleList addObject:[self getNameAndProxyUrl:@"http://ks3-cn-beijing.ksyun.com/mobile/S09E20.mp4"]];
+    
+    [sampleList addObject:[self getNameAndProxyUrl:@"http://lavaweb-10015286.video.myqcloud.com/hong-song-mei-gui-mu-2.mp4"]];
+    
+    [sampleList addObject:[self getNameAndProxyUrl:@"https://mvvideo5.meitudata.com/571090934cea5517.mp4"]];
+    [sampleList addObject:[self getNameAndProxyUrl:@"http://lavaweb-10015286.video.myqcloud.com/lava-guitar-creation-2.mp4"]];
+    [sampleList addObject:[self getNameAndProxyUrl:@"http://lavaweb-10015286.video.myqcloud.com/ideal-pick-2.mp4"]];
+    [sampleList addObject:[self getNameAndProxyUrl:@"http://120.25.226.186:32812/resources/videos/minion_01.mp4"]];
+    [sampleList addObject:[self getNameAndProxyUrl:@"http://120.25.226.186:32812/resources/videos/minion_04.mp4"]];
     self.sampleList_withhttpcache = sampleList;
     
     NSMutableArray *sampleList2 = [[NSMutableArray alloc] init];
-    [sampleList2 addObject:[self getNameAndUrl:@"http://maichang.kssws.ks-cdn.com/upload20150716161913.mp4"]];
-    [sampleList2 addObject:[self getNameAndUrl:@"http://zbvideo.ks3-cn-beijing.ksyun.com/record/live/101743_1466076252/hls/101743_1466076252.m3u8"]];
+    [sampleList2 addObject:[self getNameAndUrl:@"http://lavaweb-10015286.video.myqcloud.com/ideal-pick-2.mp4"]];
+    [sampleList2 addObject:[self getNameAndUrl:@"http://static.smartisanos.cn/common/video/video-jgpro.mp4"]];
+    
     self.sampleList_withouthttpcache = sampleList2;
-
+    
     CGRect frame = CGRectMake(0, self.nav.frame.size.height, self.view.bounds.size.width, self.view.frame.size.height - self.nav.frame.size.height);
     self.tableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStyleGrouped];
     self.tableView.delegate = self;
@@ -77,7 +90,7 @@
 {
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     self.nav = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, screenRect.size.width, 44)];
-
+    
     //创建UINavigationItem
     UINavigationItem * navigationBarTitle = [[UINavigationItem alloc] initWithTitle:@"Sample URL List"];
     [self.nav pushNavigationItem:navigationBarTitle animated:YES];
@@ -88,7 +101,7 @@
     UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(navigationBackButton)];
     //设置barbutton
     navigationBarTitle.leftBarButtonItem = back;
-   
+    
     [self.nav setItems:[NSArray arrayWithObject: navigationBarTitle]];
 }
 
@@ -125,7 +138,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (IOS_NEWER_OR_EQUAL_TO_7) {
         if (section == 0)
-           return self.sampleList_withhttpcache.count;
+            return self.sampleList_withhttpcache.count;
         else
             return self.sampleList_withouthttpcache.count;
     } else {
@@ -142,6 +155,12 @@
     if (nil == cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
         cell.textLabel.lineBreakMode = NSLineBreakByTruncatingMiddle;
+        
+        UILabel *progressLab = [[UILabel alloc] init];
+        progressLab.tag = 100021;
+        progressLab.backgroundColor = [UIColor brownColor];
+        progressLab.frame = CGRectMake(self.view.bounds.size.width - 90, (cell.contentView.bounds.size.height - 30) / 2.0, 80, 30);
+        [cell.contentView addSubview:progressLab];
     }
     
     NSInteger section = indexPath.section;
@@ -151,7 +170,7 @@
     } else {
         cell.textLabel.text = self.sampleList_withouthttpcache[row][0];
     }
- 
+    
     return cell;
 }
 
@@ -168,23 +187,34 @@
         item = self.sampleList_withouthttpcache[row];
     }
     
-    UITableViewCell *cell  = [tableView cellForRowAtIndexPath:indexPath];
-    cell.userInteractionEnabled = NO;
-    //NSString *strUrl = [[KSYHTTPProxyService sharedInstance] getProxyUrl:item[1] newCache:YES];
-    //NSURL   *url  = [NSURL URLWithString:strUrl];
-    //[self presentViewController:[[KSYPlayerVC alloc] initWithURL:url] animated:YES completion:nil];
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
-        NSString *strUrl = [[KSYHTTPProxyService sharedInstance] getProxyUrl:item[1] newCache:YES];
-        NSURL   *url  = [NSURL URLWithString:strUrl];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self presentViewController:[[KSYPlayerVC alloc] initWithURL:url] animated:YES
-                             completion:^(void){
-                                 cell.userInteractionEnabled = YES;
-            }];
-        });
+    if (section == 0) {
+        NSString *local = @"http://127.0.0.1:8123/";
+        NSString *originalUrlStr = nil;
+        NSString *httpServerUrlStr = [item[1] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        if (httpServerUrlStr.length > [local length]) {
+            originalUrlStr = [httpServerUrlStr substringFromIndex:local.length];
+        }
+        if (![originalUrlStr hasPrefix:@"http://"] && ![originalUrlStr hasPrefix:@"https://"]) {
+            return;
+        }
         
-    });
-    
+        __weak typeof(self) weakSelf = self;
+        [self.downloaderManager showDownloaderHandlerForUrl:originalUrlStr onViewController:self progressBlock:^(float progress) {
+            UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+            UILabel *progressLab = [cell.contentView viewWithTag:100021];
+            if ((NSInteger)(progress * 10000) > 10000) {
+                progress = 1.0;
+            }
+            progressLab.text = [NSString stringWithFormat:@"%f", progress];
+        } playerBlock:^{
+            __strong typeof(weakSelf) strongSelf = weakSelf;
+            [strongSelf presentViewController:[[KSYPlayerVC alloc] initWithURL:[NSURL URLWithString:httpServerUrlStr]] animated:YES completion:nil];
+        }];
+    } else {
+        NSURL   *url  = [NSURL URLWithString:[item[1] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+        
+        [self presentViewController:[[KSYPlayerVC alloc] initWithURL:url] animated:YES completion:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

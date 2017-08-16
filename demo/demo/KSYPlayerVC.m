@@ -45,6 +45,8 @@
     UILabel *labelVolume;
     UISlider *sliderVolume;
     
+    UILabel *fileCachePercentageLabel;
+    
     KSYProgressView *progressView;
     
     BOOL usingReset;
@@ -53,8 +55,8 @@
     long long int prepared_time;
     int fvr_costtime;
     int far_costtime;
-	int rotate_degress;
-	int content_mode;
+    int rotate_degress;
+    int content_mode;
     
     float cacheProgress;
 }
@@ -90,7 +92,7 @@
     progressView.hidden = YES;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mediaCacheDidChanged:) name:CacheStatusNotification object:nil];
-
+    
     cacheProgress = 0;
     [self initPlayerWithURL:_url];
 }
@@ -99,23 +101,13 @@
 
 - (void)mediaCacheDidChanged:(NSNotification *)notification {
     NSDictionary *userInfo = notification.userInfo;
-    
-    NSArray<NSValue *> *cachedFragments = userInfo[CacheFragmentsKey];
-    long long contentLength = [userInfo[CacheContentLengthKey] longLongValue];
-    
-    if (cachedFragments == nil ||
-        cachedFragments.count <= 0 ||
-        contentLength <= 0)
-        return;
-    
-    long long cacheLength = cachedFragments[0].rangeValue.length;
-    cacheProgress = (float)cacheLength / (float)contentLength;
-    NSLog(@"url %@, cache length %llu, content length %llu, cacheProgress %f", userInfo[CacheURLKey], cacheLength, contentLength, cacheProgress);
-    
-    [cachedFragments enumerateObjectsUsingBlock:^(NSValue * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSRange range = obj.rangeValue;
-        NSLog(@"cached framegent %d , range: [%d, %d]", idx, range.location, (range.location + range.length -1 ));
-    }];
+    __block float progress = [userInfo[CacheProgressKey] floatValue];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ((NSInteger)(progress * 10000) > 10000) {
+            progress = 1.0;
+        }
+        fileCachePercentageLabel.text = [NSString stringWithFormat:@"文件缓存百分比：%.2f%%", progress*100];
+    });
 }
 
 - (void)dealloc {
@@ -130,24 +122,24 @@
     
     //add play button
     btnPlay = [self addButtonWithTitle:@"播放" action:@selector(onPlayVideo:)];
-
+    
     //add pause button
     btnPause = [self addButtonWithTitle:@"暂停" action:@selector(onPauseVideo:)];
-
+    
     //add resume button
     btnResume = [self addButtonWithTitle:@"继续" action:@selector(onResumeVideo:)];
     
     //add stop button
     btnStop = [self addButtonWithTitle:@"停止" action:@selector(onStopVideo:)];
-
+    
     //add quit button
     btnQuit = [self addButtonWithTitle:@"退出" action:@selector(onQuit:)];
     
     //add rotate button
     btnRotate = [self addButtonWithTitle:@"旋转" action:@selector(onRotate:)];
-   
-	//add content mode buttpn
-	btnContentMode = [self addButtonWithTitle:@"缩放" action:@selector(onContentMode:)];
+    
+    //add content mode buttpn
+    btnContentMode = [self addButtonWithTitle:@"缩放" action:@selector(onContentMode:)];
     
     //add reload button
     btnReload = [self addButtonWithTitle:@"reload" action:@selector(onReloadVideo:)];
@@ -155,8 +147,8 @@
     btnShotScreen = [self addButtonWithTitle:@"截图" action:@selector(onShotScreen:)];
     
     btnMute = [self addButtonWithTitle:@"mute" action:@selector(onMute:)];
-
-	stat = [[UILabel alloc] init];
+    
+    stat = [[UILabel alloc] init];
     stat.backgroundColor = [UIColor clearColor];
     stat.textColor = [UIColor redColor];
     stat.numberOfLines = -1;
@@ -173,6 +165,12 @@
     labelVolume.textColor = [UIColor lightGrayColor];
     [self.view addSubview:labelVolume];
     
+    fileCachePercentageLabel = [[UILabel alloc] init];
+    fileCachePercentageLabel.text = @"文件缓存百分比：";
+    fileCachePercentageLabel.text = [NSString stringWithFormat:@"文件缓存百分比：%.2f%%", cacheProgress * 100];
+    fileCachePercentageLabel.textColor = [UIColor brownColor];
+    [self.view addSubview:fileCachePercentageLabel];
+    
     switchHwCodec = [[UISwitch alloc] init];
     [self.view  addSubview:switchHwCodec];
     switchHwCodec.on = YES;
@@ -186,7 +184,7 @@
     
     progressView = [[KSYProgressView alloc] init];
     [self.view addSubview:progressView];
-
+    
     [self layoutUI];
     
     [self.view bringSubviewToFront:stat];
@@ -212,7 +210,7 @@
     CGFloat btnHgt = 30;
     CGFloat xPos = 0;
     CGFloat yPos = 0;
-
+    
     yPos = 2 * gap;
     xPos = gap;
     labelVolume.frame = CGRectMake(xPos, yPos, btnWdt, btnHgt);
@@ -225,6 +223,8 @@
     switchHwCodec.frame = CGRectMake(xPos, yPos, btnWdt, btnHgt);
     
     videoView.frame = CGRectMake(0, 0, wdt, hgt);
+    
+    fileCachePercentageLabel.frame = CGRectMake(labelVolume.frame.origin.x, labelVolume.frame.origin.y - 30, 300, 40);
     
     xPos = gap;
     yPos = hgt - btnHgt - gap;
@@ -239,7 +239,7 @@
     btnQuit.frame = CGRectMake(xPos, yPos, btnWdt, btnHgt);
     
     xPos = gap;
-	yPos -= (btnHgt + gap);
+    yPos -= (btnHgt + gap);
     btnRotate.frame = CGRectMake(xPos, yPos, btnWdt, btnHgt);
     xPos += gap + btnWdt;
     btnContentMode.frame = CGRectMake(xPos, yPos, btnWdt, btnHgt);
@@ -354,29 +354,29 @@
             stat.text = [NSString stringWithFormat:@"player Error : %@", [[notify userInfo] valueForKey:@"error"]];
         }else if (reason == MPMovieFinishReasonUserExited){
             stat.text = [NSString stringWithFormat:@"player userExited"];
-
+            
         }
         [self StopTimer];
     }
     if (MPMovieNaturalSizeAvailableNotification ==  notify.name) {
         NSLog(@"video size %.0f-%.0f", _player.naturalSize.width, _player.naturalSize.height);
     }
-	if (MPMoviePlayerFirstVideoFrameRenderedNotification == notify.name)
-	{
+    if (MPMoviePlayerFirstVideoFrameRenderedNotification == notify.name)
+    {
         fvr_costtime = (int)((long long int)([self getCurrentTime] * 1000) - prepared_time);
-		NSLog(@"first video frame show, cost time : %dms!\n", fvr_costtime);
-	}
-	
-	if (MPMoviePlayerFirstAudioFrameRenderedNotification == notify.name)
-	{
+        NSLog(@"first video frame show, cost time : %dms!\n", fvr_costtime);
+    }
+    
+    if (MPMoviePlayerFirstAudioFrameRenderedNotification == notify.name)
+    {
         far_costtime = (int)((long long int)([self getCurrentTime] * 1000) - prepared_time);
-		NSLog(@"first audio frame render, cost time : %dms!\n", far_costtime);
-	}
+        NSLog(@"first audio frame render, cost time : %dms!\n", far_costtime);
+    }
     
     if (MPMoviePlayerSuggestReloadNotification == notify.name)
     {
         NSLog(@"suggest using reload function!\n");
-	}
+    }
     
     if(MPMoviePlayerPlaybackStatusNotification == notify.name)
     {
@@ -454,7 +454,7 @@
                                               object:_player];
 }
 
-- (void)releaseObservers 
+- (void)releaseObservers
 {
     [[NSNotificationCenter defaultCenter]removeObserver:self
                                                    name:MPMediaPlaybackIsPreparedToPlayDidChangeNotification
@@ -487,6 +487,7 @@
 
 - (void)initPlayerWithURL:(NSURL *)aURL {
     lastSize = 0.0;
+    //
     self.player = [[KSYMoviePlayerController alloc] initWithContentURL: aURL];
     [self setupObservers];
     
@@ -677,7 +678,7 @@
                  "视频缓冲区数据量:%.1fMB\n"
                  "缓冲区总数据量%.1fMB\n"
                  "解码帧率:%.2f 显示帧率:%.2f\n",
-
+                 
                  [_player getVersion],
                  _player,
                  [[_player contentURL] absoluteString],
@@ -728,17 +729,18 @@
         [_player.view removeFromSuperview];
         self.player = nil;
     }
-    
+    [[NSNotificationCenter defaultCenter] postNotificationName:closePlayerNotification object:self userInfo:@{ClosePlayerURLKey:[[KSYHTTPProxyService sharedInstance] getOriginalUrl:self.url.absoluteString]}];
     [self dismissViewControllerAnimated:FALSE completion:nil];
     stat.text = nil;
+    
 }
 
 - (IBAction)onRotate:(id)sender {
-	
-	rotate_degress += 90;
-	if(rotate_degress >= 360)
-		rotate_degress = 0;
-
+    
+    rotate_degress += 90;
+    if(rotate_degress >= 360)
+        rotate_degress = 0;
+    
     if (_player) {
         _player.rotateDegress = rotate_degress;
     }
@@ -752,13 +754,13 @@
 }
 
 - (IBAction)onContentMode:(id)sender {
-
-	if (_player) {
+    
+    if (_player) {
         _player.scalingMode = content_mode;
     }
-	content_mode++;
-	if(content_mode > MPMovieScalingModeFill)
-		content_mode = MPMovieScalingModeNone;
+    content_mode++;
+    if(content_mode > MPMovieScalingModeFill)
+        content_mode = MPMovieScalingModeNone;
 }
 
 - (void) remoteControlReceivedWithEvent: (UIEvent *) receivedEvent {
@@ -797,7 +799,7 @@
 {
     if([keyPath isEqual:@"currentPlaybackTime"])
     {
-//        NSTimeInterval position = [[change objectForKey:NSKeyValueChangeNewKey] floatValue];
+        //        NSTimeInterval position = [[change objectForKey:NSKeyValueChangeNewKey] floatValue];
         //NSLog(@"current playback position is:%.1fs\n", position);
         progressView.playProgress = _player.currentPlaybackTime / _player.duration;
     }
