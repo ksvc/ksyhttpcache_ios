@@ -21,6 +21,8 @@ KSY HTTPCache相当于本地的代理服务，使用KSY HTTPCache后，播放器
       
 5. 提供两种缓存策略供选择（限制缓存区总大小或者限制缓存文件总个数)
 
+6. 提供预缓存接口KSYFileDownloader
+
 
 ## 3.下载和使用
 下载framework目录下的KSYHTTPCache.framework，并添加到工程中。
