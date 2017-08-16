@@ -6,7 +6,7 @@ PODS:
   - CocoaLumberjack/Default (3.2.0)
   - CocoaLumberjack/Extensions (3.2.0):
     - CocoaLumberjack/Default
-  - ksyhttpcache (1.0.9):
+  - ksyhttpcache (1.2.0):
     - CocoaAsyncSocket
     - CocoaLumberjack
   - KSYMediaPlayer_iOS (2.3.0)
