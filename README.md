@@ -28,12 +28,11 @@ KSY HTTPCache相当于本地的代理服务，使用KSY HTTPCache后，播放器
 下载framework目录下的KSYHTTPCache.framework，并添加到工程中，然后添加CocoaAsyncSocket，CocoaLumberjack，KSYMediaPlayer_iOS.framework依赖库到工程；
 
 若使用cocoaPods，需要在pods文件中引入
-    pod 'CocoaAsyncSocket'
-    pod 'CocoaLumberjack'
+    pod 'KSYHTTPCache'
     pod 'KSYMediaPlayer_iOS'
     执行pod install命令即可
 
-若要使用【预缓存】功能，需要引入KSYFileDownloader，#import <KSYHTTPCache/KSYFileDownloader.h>，可参考demo工程下的ShowFileDownloader类
+若要使用【预缓存】功能，需要引入KSYFileDownloader，即#import <KSYHTTPCache/KSYFileDownloader.h>，可参考demo工程下的ShowFileDownloader类
 
 为了保证正常工作，推荐在AppDelegate中开启和关闭服务，如下:
 ```objectivec
