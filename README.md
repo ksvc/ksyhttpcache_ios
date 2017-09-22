@@ -14,6 +14,8 @@ KSY HTTPCache相当于本地的代理服务，使用KSY HTTPCache后，播放器
 1. http点播视频边缓存边播放，且播放器可从通过回调得到缓存的进度以及错误码
 
 2. 缓存完成的视频，再次点播时可以离线播放，不再请求视频server
+获取代理url方式（newCache参数一定要置为NO）：
+[[KSYHTTPProxyService sharedInstance] getProxyUrl:@"http://maichang.kssws.ks-cdn.com/upload20150716161913.mp4" newCache:NO]];
 
 3. 查询缓存已完成的文件列表， 缓存未完成的文件列表
 
