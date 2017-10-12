@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/KSYCacheTaskType.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/KSYCacheTaskType</TokenIdentifier>
+			<Abstract type="html">缓存任务的类型</Abstract>
+			<DeclaredIn>HTTPCacheDefines.h</DeclaredIn>
+            
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/KSYCacheTaskTypeHttpServer</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>KSYCacheTaskTypeHttpServer</Declaration>
+            
+            <DeclaredIn>HTTPCacheDefines.h</DeclaredIn>
+            
+            <NodeRef refid="4"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/KSYCacheTaskTypeFileDownloader</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>KSYCacheTaskTypeFileDownloader</Declaration>
+            
+            <DeclaredIn>HTTPCacheDefines.h</DeclaredIn>
+            
+            <NodeRef refid="4"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

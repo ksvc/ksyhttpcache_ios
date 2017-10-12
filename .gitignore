@@ -26,6 +26,7 @@ xcuserdata
 *.moved-aside
 *.xcuserstate
 *.xcscmblueprint
+*.xcarchive
 
 ## Obj-C/Swift specific
 *.hmap
@@ -59,3 +60,6 @@ fastlane/screenshots
 ### Objective-C Patch ###
 *.xcscmblueprint
 *.log
+*.xcworkspace/
+Podfile.lock
+.DS_Store

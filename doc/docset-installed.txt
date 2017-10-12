@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/shixuemei1/Library/Developer/Shared/Documentation/DocSets/com.ksyun.KSYHTTPCacheDemo_iOS.docset
+Time: 2017-10-12 11:39:03 +0000

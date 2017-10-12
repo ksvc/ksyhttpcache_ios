@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/KSYFileDownloader.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/KSYFileDownloader</TokenIdentifier>
+			<Abstract type="html">视频下载器，一个视频文件对应一个下载器，用于开播前预先缓存视频 *</Abstract>
+			<DeclaredIn>KSYFileDownloader.h</DeclaredIn>
+            
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYFileDownloader/initWithUrlString:progressBlock:</TokenIdentifier>
+			<Abstract type="html">初始化下载器</Abstract>
+			<DeclaredIn>KSYFileDownloader.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)initWithUrlString:(NSString *)urlString progressBlock:(void ( ^ ) ( float progress ))progressBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>urlString</Name>
+					<Abstract type="html">视频原始地址（未经过代理处理的）</Abstract>
+				</Parameter><Parameter>
+					<Name>progressBlock</Name>
+					<Abstract type="html">视频下载进度变化时处理的事件</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithUrlString:progressBlock:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYFileDownloader/startDownload</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>KSYFileDownloader.h</DeclaredIn>
+			
+			<Declaration>- (void)startDownload</Declaration>
+			
+			
+			<Anchor>//api/name/startDownload</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYFileDownloader/pauseDownload</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>KSYFileDownloader.h</DeclaredIn>
+			
+			<Declaration>- (void)pauseDownload</Declaration>
+			
+			
+			<Anchor>//api/name/pauseDownload</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYFileDownloader/urlString</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>KSYFileDownloader.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)urlString</Declaration>
+			
+			
+			<Anchor>//api/name/urlString</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYFileDownloader/downloaderState</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>KSYFileDownloader.h</DeclaredIn>
+			
+			<Declaration>- (KSYFileDownloaderState)downloaderState</Declaration>
+			
+			
+			<Anchor>//api/name/downloaderState</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/KSYFileDownloader/handleOpenPlayerForUrl:progressBlock:</TokenIdentifier>
+			<Abstract type="html">播放地址为url的视频时，调用此方法</Abstract>
+			<DeclaredIn>KSYFileDownloader.h</DeclaredIn>
+			
+			<Declaration>+ (void)handleOpenPlayerForUrl:(NSString *)url progressBlock:(void ( ^ ) ( float ))progressBlock</Declaration>
+			
+			
+			<Anchor>//api/name/handleOpenPlayerForUrl:progressBlock:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/KSYFileDownloader/handleClosePlayerForUrl:progressBlock:</TokenIdentifier>
+			<Abstract type="html">停止播放地址为url的视频时，调用此方法</Abstract>
+			<DeclaredIn>KSYFileDownloader.h</DeclaredIn>
+			
+			<Declaration>+ (void)handleClosePlayerForUrl:(NSString *)url progressBlock:(void ( ^ ) ( float ))progressBlock</Declaration>
+			
+			
+			<Anchor>//api/name/handleClosePlayerForUrl:progressBlock:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

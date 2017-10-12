@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/KSYHTTPCacheErrorCode.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/KSYHTTPCacheErrorCode</TokenIdentifier>
+			<Abstract type="html">错误码</Abstract>
+			<DeclaredIn>HTTPCacheDefines.h</DeclaredIn>
+            
+			
+			<NodeRef refid="6"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/OK</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>OK</Declaration>
+            
+            <DeclaredIn>HTTPCacheDefines.h</DeclaredIn>
+            
+            <NodeRef refid="6"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/UnknownError</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>UnknownError</Declaration>
+            
+            <DeclaredIn>HTTPCacheDefines.h</DeclaredIn>
+            
+            <NodeRef refid="6"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/OpenCacheError</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>OpenCacheError</Declaration>
+            
+            <DeclaredIn>HTTPCacheDefines.h</DeclaredIn>
+            
+            <NodeRef refid="6"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/ReadCacheError</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>ReadCacheError</Declaration>
+            
+            <DeclaredIn>HTTPCacheDefines.h</DeclaredIn>
+            
+            <NodeRef refid="6"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/WriteCacheError</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>WriteCacheError</Declaration>
+            
+            <DeclaredIn>HTTPCacheDefines.h</DeclaredIn>
+            
+            <NodeRef refid="6"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/CloseCacheError</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>CloseCacheError</Declaration>
+            
+            <DeclaredIn>HTTPCacheDefines.h</DeclaredIn>
+            
+            <NodeRef refid="6"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/DeleteCacheError</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>DeleteCacheError</Declaration>
+            
+            <DeclaredIn>HTTPCacheDefines.h</DeclaredIn>
+            
+            <NodeRef refid="6"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SaveConfigError</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>SaveConfigError</Declaration>
+            
+            <DeclaredIn>HTTPCacheDefines.h</DeclaredIn>
+            
+            <NodeRef refid="6"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/HeadRequestError</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>HeadRequestError</Declaration>
+            
+            <DeclaredIn>HTTPCacheDefines.h</DeclaredIn>
+            
+            <NodeRef refid="6"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/HTTPDownloadError</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>HTTPDownloadError</Declaration>
+            
+            <DeclaredIn>HTTPCacheDefines.h</DeclaredIn>
+            
+            <NodeRef refid="6"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/StartServerError</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>StartServerError</Declaration>
+            
+            <DeclaredIn>HTTPCacheDefines.h</DeclaredIn>
+            
+            <NodeRef refid="6"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/InvalidRequestError</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>InvalidRequestError</Declaration>
+            
+            <DeclaredIn>HTTPCacheDefines.h</DeclaredIn>
+            
+            <NodeRef refid="6"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/UnknowHTTPMethodError</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>UnknowHTTPMethodError</Declaration>
+            
+            <DeclaredIn>HTTPCacheDefines.h</DeclaredIn>
+            
+            <NodeRef refid="6"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

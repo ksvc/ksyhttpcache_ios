@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocSetNodes version="1.0">
+    <TOC>
+        <Node type="folder">
+            <Name>KSYHTTPCacheDemo_iOS</Name>
+            <Path>index.html</Path>
+			<Subnodes>
+                
+				
+				<Node type="folder">
+					<Name>Classes</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="1"/>
+						<NodeRef refid="2"/>
+						
+					</Subnodes>
+				</Node>
+				
+				
+                
+                
+				<Node>
+					<Name>Constants</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="3"/>
+						<NodeRef refid="4"/>
+						<NodeRef refid="5"/>
+						<NodeRef refid="6"/>
+						
+					</Subnodes>
+				</Node>
+				
+                
+			</Subnodes>
+        </Node>
+    </TOC>
+	<Library>
+		
+		<Node id="1" type="file" documentType="reference">
+            <Name>KSYFileDownloader</Name>
+            <Path>Classes/KSYFileDownloader.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/KSYFileDownloader.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/KSYFileDownloader.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/KSYFileDownloader.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/KSYFileDownloader.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="2" type="file" documentType="reference">
+            <Name>KSYHTTPProxyService</Name>
+            <Path>Classes/KSYHTTPProxyService.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/KSYHTTPProxyService.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/KSYHTTPProxyService.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/KSYHTTPProxyService.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/KSYHTTPProxyService.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		
+		
+        
+        <Node id="3" type="file" documentType="reference">
+            <Name>KSYCacheStrategy</Name>
+            <Path>Constants/KSYCacheStrategy.html</Path>
+            
+        </Node>
+		<Node id="4" type="file" documentType="reference">
+            <Name>KSYCacheTaskType</Name>
+            <Path>Constants/KSYCacheTaskType.html</Path>
+            
+        </Node>
+		<Node id="5" type="file" documentType="reference">
+            <Name>KSYFileDownloaderState</Name>
+            <Path>Constants/KSYFileDownloaderState.html</Path>
+            
+        </Node>
+		<Node id="6" type="file" documentType="reference">
+            <Name>KSYHTTPCacheErrorCode</Name>
+            <Path>Constants/KSYHTTPCacheErrorCode.html</Path>
+            
+        </Node>
+		
+        
+	</Library>
+</DocSetNodes>

@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>KSYHTTPProxyService Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">KSYHTTPCacheDemo_iOS </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Kingsoft</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/sharedInstance">+ sharedInstance</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/cacheRoot">- cacheRoot</option>
+		
+		<option value="//api/name/deleteAllCachesWithError:">- deleteAllCachesWithError:</option>
+		
+		<option value="//api/name/deleteCacheForUrl:error:">- deleteCacheForUrl:error:</option>
+		
+		<option value="//api/name/getAllCachedFileListWithError:">- getAllCachedFileListWithError:</option>
+		
+		<option value="//api/name/getAllCachingFileListWithError:">- getAllCachingFileListWithError:</option>
+		
+		<option value="//api/name/getCacheFragmentForUrl:error:">- getCacheFragmentForUrl:error:</option>
+		
+		<option value="//api/name/getCacheStrategy">- getCacheStrategy</option>
+		
+		<option value="//api/name/getCachedFilePathForUrl:">- getCachedFilePathForUrl:</option>
+		
+		<option value="//api/name/getOriginalUrl:">- getOriginalUrl:</option>
+		
+		<option value="//api/name/getProxyUrl:">- getProxyUrl:</option>
+		
+		<option value="//api/name/getProxyUrl:newCache:">- getProxyUrl:newCache:</option>
+		
+		<option value="//api/name/isCacheCompleteForUrl:">- isCacheCompleteForUrl:</option>
+		
+		<option value="//api/name/isRunning">- isRunning</option>
+		
+		<option value="//api/name/maxCacheSize">- maxCacheSize</option>
+		
+		<option value="//api/name/maxFilesCount">- maxFilesCount</option>
+		
+		<option value="//api/name/setCacheRoot:">- setCacheRoot:</option>
+		
+		<option value="//api/name/setDisableCache:">- setDisableCache:</option>
+		
+		<option value="//api/name/setHttpHeaders:">- setHttpHeaders:</option>
+		
+		<option value="//api/name/setMaxCacheSizeLimited:">- setMaxCacheSizeLimited:</option>
+		
+		<option value="//api/name/setMaxFilesCountLimited:">- setMaxFilesCountLimited:</option>
+		
+		<option value="//api/name/setMaxSingleFileSize:">- setMaxSingleFileSize:</option>
+		
+		<option value="//api/name/startServer">- startServer</option>
+		
+		<option value="//api/name/stopServer">- stopServer</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">KSYHTTPProxyService Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>KSYHTTPProxyService.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/sharedInstance" title="sharedInstance"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sharedInstance">+&nbsp;sharedInstance</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>+ (KSYHTTPProxyService *)sharedInstance</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setCacheRoot:" title="setCacheRoot:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setCacheRoot:">&ndash;&nbsp;setCacheRoot:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置缓存区位置</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setCacheRoot:(NSString *)<em>cacheRoot</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYHTTPProxyService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cacheRoot" title="cacheRoot"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cacheRoot">&ndash;&nbsp;cacheRoot</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>查询缓存区位置</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)cacheRoot</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYHTTPProxyService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getCacheStrategy" title="getCacheStrategy"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getCacheStrategy">&ndash;&nbsp;getCacheStrategy</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>查询当前缓存策略，0代表限制缓存区总大小，1代表限制缓存区文件个数</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSInteger)getCacheStrategy</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYHTTPProxyService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setMaxCacheSizeLimited:" title="setMaxCacheSizeLimited:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setMaxCacheSizeLimited:">&ndash;&nbsp;setMaxCacheSizeLimited:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置缓存区文件总大小限制</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setMaxCacheSizeLimited:(long long)<em>maxCacheSize</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYHTTPProxyService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/maxCacheSize" title="maxCacheSize"></a>
+	<h3 class="method-title"><code><a href="#//api/name/maxCacheSize">&ndash;&nbsp;maxCacheSize</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>查询缓存区最大大小</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (long long)maxCacheSize</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYHTTPProxyService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setMaxFilesCountLimited:" title="setMaxFilesCountLimited:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setMaxFilesCountLimited:">&ndash;&nbsp;setMaxFilesCountLimited:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置缓存区文件总个数限制</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setMaxFilesCountLimited:(NSInteger)<em>maxFilesCount</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYHTTPProxyService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/maxFilesCount" title="maxFilesCount"></a>
+	<h3 class="method-title"><code><a href="#//api/name/maxFilesCount">&ndash;&nbsp;maxFilesCount</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>查询缓存区最大文件个数</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSInteger)maxFilesCount</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYHTTPProxyService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setMaxSingleFileSize:" title="setMaxSingleFileSize:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setMaxSingleFileSize:">&ndash;&nbsp;setMaxSingleFileSize:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置单个文件大小限制，超过该大小的文件将不被缓存。
+默认大小为500M</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setMaxSingleFileSize:(long long)<em>maxSingleFileSize</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYHTTPProxyService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setDisableCache:" title="setDisableCache:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setDisableCache:">&ndash;&nbsp;setDisableCache:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置单个文件大小限制，超过该大小的文件将不被缓存。
+默认大小为500M</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setDisableCache:(BOOL)<em>disableCache</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYHTTPProxyService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/startServer" title="startServer"></a>
+	<h3 class="method-title"><code><a href="#//api/name/startServer">&ndash;&nbsp;startServer</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>启动server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)startServer</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYHTTPProxyService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/stopServer" title="stopServer"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stopServer">&ndash;&nbsp;stopServer</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>关闭server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)stopServer</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYHTTPProxyService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isRunning" title="isRunning"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isRunning">&ndash;&nbsp;isRunning</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>查询server是否在运行状态</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isRunning</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYHTTPProxyService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getProxyUrl:" title="getProxyUrl:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getProxyUrl:">&ndash;&nbsp;getProxyUrl:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取代理后的播放地址</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getProxyUrl:(NSString *)<em>url</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYHTTPProxyService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getOriginalUrl:" title="getOriginalUrl:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getOriginalUrl:">&ndash;&nbsp;getOriginalUrl:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取原始播放地址</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getOriginalUrl:(NSString *)<em>url</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYHTTPProxyService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getProxyUrl:newCache:" title="getProxyUrl:newCache:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getProxyUrl:newCache:">&ndash;&nbsp;getProxyUrl:newCache:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取代理后的播放地址</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getProxyUrl:(NSString *)<em>url</em> newCache:(BOOL)<em>newCache</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYHTTPProxyService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteAllCachesWithError:" title="deleteAllCachesWithError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteAllCachesWithError:">&ndash;&nbsp;deleteAllCachesWithError:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>删除缓存区所以文件</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)deleteAllCachesWithError:(NSError **)<em>error</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYHTTPProxyService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteCacheForUrl:error:" title="deleteCacheForUrl:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteCacheForUrl:error:">&ndash;&nbsp;deleteCacheForUrl:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>删除某个url对应的缓存文件</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)deleteCacheForUrl:(NSURL *)<em>url</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYHTTPProxyService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isCacheCompleteForUrl:" title="isCacheCompleteForUrl:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isCacheCompleteForUrl:">&ndash;&nbsp;isCacheCompleteForUrl:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>查询某个url缓存是否完成</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isCacheCompleteForUrl:(NSURL *)<em>url</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYHTTPProxyService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getAllCachedFileListWithError:" title="getAllCachedFileListWithError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getAllCachedFileListWithError:">&ndash;&nbsp;getAllCachedFileListWithError:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获得缓存已完成文件列表
+返回的数组元素为NSDictionay, 包含为url和文件路径</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)getAllCachedFileListWithError:(NSError **)<em>errors</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYHTTPProxyService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getAllCachingFileListWithError:" title="getAllCachingFileListWithError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getAllCachingFileListWithError:">&ndash;&nbsp;getAllCachingFileListWithError:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获得缓存未完成文件列表
+返回的数组元素为NSDictionay, 包含url、文件路径、content length、cache fragments</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)getAllCachingFileListWithError:(NSError **)<em>error</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYHTTPProxyService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getCachedFilePathForUrl:" title="getCachedFilePathForUrl:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getCachedFilePathForUrl:">&ndash;&nbsp;getCachedFilePathForUrl:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获得url对应缓存文件的路径</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getCachedFilePathForUrl:(NSURL *)<em>url</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYHTTPProxyService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getCacheFragmentForUrl:error:" title="getCacheFragmentForUrl:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getCacheFragmentForUrl:error:">&ndash;&nbsp;getCacheFragmentForUrl:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获得url对应缓存未完成url对应的cache fragment</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)getCacheFragmentForUrl:(NSURL *)<em>url</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYHTTPProxyService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setHttpHeaders:" title="setHttpHeaders:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setHttpHeaders:">&ndash;&nbsp;setHttpHeaders:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>发送http请求时需要header带上的字段
+必须 key:value 都是NSString类型</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setHttpHeaders:(NSDictionary&lt;NSString*,NSString*&gt; *)<em>headers</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>headers</code></th>
+						<td><p>请求头带的字段</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYHTTPProxyService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Kingsoft. All rights reserved. </p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

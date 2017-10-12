@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/KSYHTTPProxyService.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/KSYHTTPProxyService</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+            
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/KSYHTTPProxyService/sharedInstance</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>+ (KSYHTTPProxyService *)sharedInstance</Declaration>
+			
+			
+			<Anchor>//api/name/sharedInstance</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYHTTPProxyService/setCacheRoot:</TokenIdentifier>
+			<Abstract type="html">设置缓存区位置</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>- (void)setCacheRoot:(NSString *)cacheRoot</Declaration>
+			
+			
+			<Anchor>//api/name/setCacheRoot:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYHTTPProxyService/cacheRoot</TokenIdentifier>
+			<Abstract type="html">查询缓存区位置</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)cacheRoot</Declaration>
+			
+			
+			<Anchor>//api/name/cacheRoot</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYHTTPProxyService/getCacheStrategy</TokenIdentifier>
+			<Abstract type="html">查询当前缓存策略，0代表限制缓存区总大小，1代表限制缓存区文件个数</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>- (NSInteger)getCacheStrategy</Declaration>
+			
+			
+			<Anchor>//api/name/getCacheStrategy</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYHTTPProxyService/setMaxCacheSizeLimited:</TokenIdentifier>
+			<Abstract type="html">设置缓存区文件总大小限制</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>- (void)setMaxCacheSizeLimited:(long long)maxCacheSize</Declaration>
+			
+			
+			<Anchor>//api/name/setMaxCacheSizeLimited:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYHTTPProxyService/maxCacheSize</TokenIdentifier>
+			<Abstract type="html">查询缓存区最大大小</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>- (long long)maxCacheSize</Declaration>
+			
+			
+			<Anchor>//api/name/maxCacheSize</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYHTTPProxyService/setMaxFilesCountLimited:</TokenIdentifier>
+			<Abstract type="html">设置缓存区文件总个数限制</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>- (void)setMaxFilesCountLimited:(NSInteger)maxFilesCount</Declaration>
+			
+			
+			<Anchor>//api/name/setMaxFilesCountLimited:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYHTTPProxyService/maxFilesCount</TokenIdentifier>
+			<Abstract type="html">查询缓存区最大文件个数</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>- (NSInteger)maxFilesCount</Declaration>
+			
+			
+			<Anchor>//api/name/maxFilesCount</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYHTTPProxyService/setMaxSingleFileSize:</TokenIdentifier>
+			<Abstract type="html">设置单个文件大小限制，超过该大小的文件将不被缓存。
+默认大小为500M</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>- (void)setMaxSingleFileSize:(long long)maxSingleFileSize</Declaration>
+			
+			
+			<Anchor>//api/name/setMaxSingleFileSize:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYHTTPProxyService/setDisableCache:</TokenIdentifier>
+			<Abstract type="html">设置单个文件大小限制，超过该大小的文件将不被缓存。
+默认大小为500M</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>- (void)setDisableCache:(BOOL)disableCache</Declaration>
+			
+			
+			<Anchor>//api/name/setDisableCache:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYHTTPProxyService/startServer</TokenIdentifier>
+			<Abstract type="html">启动server</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>- (void)startServer</Declaration>
+			
+			
+			<Anchor>//api/name/startServer</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYHTTPProxyService/stopServer</TokenIdentifier>
+			<Abstract type="html">关闭server</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>- (void)stopServer</Declaration>
+			
+			
+			<Anchor>//api/name/stopServer</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYHTTPProxyService/isRunning</TokenIdentifier>
+			<Abstract type="html">查询server是否在运行状态</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isRunning</Declaration>
+			
+			
+			<Anchor>//api/name/isRunning</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYHTTPProxyService/getProxyUrl:</TokenIdentifier>
+			<Abstract type="html">获取代理后的播放地址</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)getProxyUrl:(NSString *)url</Declaration>
+			
+			
+			<Anchor>//api/name/getProxyUrl:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYHTTPProxyService/getOriginalUrl:</TokenIdentifier>
+			<Abstract type="html">获取原始播放地址</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)getOriginalUrl:(NSString *)url</Declaration>
+			
+			
+			<Anchor>//api/name/getOriginalUrl:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYHTTPProxyService/getProxyUrl:newCache:</TokenIdentifier>
+			<Abstract type="html">获取代理后的播放地址</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)getProxyUrl:(NSString *)url newCache:(BOOL)newCache</Declaration>
+			
+			
+			<Anchor>//api/name/getProxyUrl:newCache:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYHTTPProxyService/deleteAllCachesWithError:</TokenIdentifier>
+			<Abstract type="html">删除缓存区所以文件</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>- (void)deleteAllCachesWithError:(NSError **)error</Declaration>
+			
+			
+			<Anchor>//api/name/deleteAllCachesWithError:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYHTTPProxyService/deleteCacheForUrl:error:</TokenIdentifier>
+			<Abstract type="html">删除某个url对应的缓存文件</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>- (void)deleteCacheForUrl:(NSURL *)url error:(NSError **)error</Declaration>
+			
+			
+			<Anchor>//api/name/deleteCacheForUrl:error:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYHTTPProxyService/isCacheCompleteForUrl:</TokenIdentifier>
+			<Abstract type="html">查询某个url缓存是否完成</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isCacheCompleteForUrl:(NSURL *)url</Declaration>
+			
+			
+			<Anchor>//api/name/isCacheCompleteForUrl:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYHTTPProxyService/getAllCachedFileListWithError:</TokenIdentifier>
+			<Abstract type="html">获得缓存已完成文件列表
+返回的数组元素为NSDictionay, 包含为url和文件路径</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>- (NSArray *)getAllCachedFileListWithError:(NSError **)errors</Declaration>
+			
+			
+			<Anchor>//api/name/getAllCachedFileListWithError:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYHTTPProxyService/getAllCachingFileListWithError:</TokenIdentifier>
+			<Abstract type="html">获得缓存未完成文件列表
+返回的数组元素为NSDictionay, 包含url、文件路径、content length、cache fragments</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>- (NSArray *)getAllCachingFileListWithError:(NSError **)error</Declaration>
+			
+			
+			<Anchor>//api/name/getAllCachingFileListWithError:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYHTTPProxyService/getCachedFilePathForUrl:</TokenIdentifier>
+			<Abstract type="html">获得url对应缓存文件的路径</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)getCachedFilePathForUrl:(NSURL *)url</Declaration>
+			
+			
+			<Anchor>//api/name/getCachedFilePathForUrl:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYHTTPProxyService/getCacheFragmentForUrl:error:</TokenIdentifier>
+			<Abstract type="html">获得url对应缓存未完成url对应的cache fragment</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>- (NSArray *)getCacheFragmentForUrl:(NSURL *)url error:(NSError **)error</Declaration>
+			
+			
+			<Anchor>//api/name/getCacheFragmentForUrl:error:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYHTTPProxyService/setHttpHeaders:</TokenIdentifier>
+			<Abstract type="html">发送http请求时需要header带上的字段
+必须 key:value 都是NSString类型</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>- (void)setHttpHeaders:(NSDictionary&lt;NSString*,NSString*&gt; *)headers</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>headers</Name>
+					<Abstract type="html">请求头带的字段</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setHttpHeaders:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/KSYFileDownloaderState.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/KSYFileDownloaderState</TokenIdentifier>
+			<Abstract type="html">FileDownloader任务状态</Abstract>
+			<DeclaredIn>HTTPCacheDefines.h</DeclaredIn>
+            
+			
+			<NodeRef refid="5"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/KSYFileDownloaderStateUnknown</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>KSYFileDownloaderStateUnknown</Declaration>
+            
+            <DeclaredIn>HTTPCacheDefines.h</DeclaredIn>
+            
+            <NodeRef refid="5"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/KSYFileDownloaderStatePause</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>KSYFileDownloaderStatePause</Declaration>
+            
+            <DeclaredIn>HTTPCacheDefines.h</DeclaredIn>
+            
+            <NodeRef refid="5"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/KSYFileDownloaderStateDownloading</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>KSYFileDownloaderStateDownloading</Declaration>
+            
+            <DeclaredIn>HTTPCacheDefines.h</DeclaredIn>
+            
+            <NodeRef refid="5"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/KSYFileDownloaderStateInvalid</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>KSYFileDownloaderStateInvalid</Declaration>
+            
+            <DeclaredIn>HTTPCacheDefines.h</DeclaredIn>
+            
+            <NodeRef refid="5"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/KSYFileDownloaderStateFinished</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>KSYFileDownloaderStateFinished</Declaration>
+            
+            <DeclaredIn>HTTPCacheDefines.h</DeclaredIn>
+            
+            <NodeRef refid="5"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>
