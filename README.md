@@ -1,4 +1,14 @@
 # 金山云iOS HTTPCache SDK
+
+
+[![Apps Using](https://img.shields.io/cocoapods/at/ksyhttpcache.svg?label=Apps%20Using%20ksyhttpcache&colorB=28B9FE)](http://cocoapods.org/pods/ksyhttpcache)[![Downloads](https://img.shields.io/cocoapods/dt/ksyhttpcache.svg?label=Total%20Downloads%20ksyhttpcache&colorB=28B9FE)](http://cocoapods.org/pods/ksyhttpcache)
+
+
+[![CocoaPods version](https://img.shields.io/cocoapods/v/ksyhttpcache.svg)](https://cocoapods.org/pods/ksyhttpcache)
+[![CocoaPods platform](https://img.shields.io/cocoapods/p/ksyhttpcache.svg)](https://cocoapods.org/pods/ksyhttpcache)
+
+
+
 金山云iOS平台http缓存SDK，可方便地与播放器集成，实现http视频边播放边下载（缓存）功能。ksyun http cache sdk for ios platform, it's easy to integrated with media players to provide caching capability when watching http videos.
 
 ## 1. 产品概述
