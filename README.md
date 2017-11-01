@@ -77,17 +77,17 @@ KSYMoviePlayerController *player = [[KSYMoviePlayerController alloc] initWithCon
 
 3. 状态监听
    
-   - KSYHTTPCache发生错误时的发送CacheErrorNotification通知
+   KSYHTTPCache发生错误时的发送CacheErrorNotification通知
 
    ```objectivec
    CacheErrorNotification
    ```
    
-   - KSYHTTPCache缓存进度发送变化时发送CacheStatusNotification通知
+   KSYHTTPCache缓存进度发送变化时发送CacheStatusNotification通知
 
    ```objectivec
    CacheStatusNotification
-  ```
+   ```
    
    注册notification监听
    ```objectivec
