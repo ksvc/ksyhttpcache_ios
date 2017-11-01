@@ -187,10 +187,13 @@ KSYMoviePlayerController *player = [[KSYMoviePlayerController alloc] initWithCon
 
 获得缓存区路径
 
-## 5.其他文档
+## 5.API接口文档
+API接口文档[在线版](https://ksvc.github.io/ksyhttpcache_ios/doc/html/index.html)  
+
+## 6.其他文档
 请见[wiki](https://github.com/ksvc/ksyhttpcache_ios/wiki)
 
-## 6.反馈与建议
+## 7.反馈与建议
 - 主页：[金山云](http://www.ksyun.com/)
 - 邮箱：<zengfanping@kingsoft.com>
 - QQ讨论群：574179720
