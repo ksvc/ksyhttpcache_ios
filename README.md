@@ -103,56 +103,24 @@ KSYMoviePlayerController *player = [[KSYMoviePlayerController alloc] initWithCon
                 object:nil];
     ```
 
-使用以上方法，proxy将采用默认配置。可采用如下方法自定义配置(需在startServer前设置)：
+使用以上方法，proxy将采用默认配置。可采用如下方法自定义配置(需在startServer前设置)：  
 
--  设置缓存区位置
+设置缓存区位置  
    ```objectivec
   (void)setCacheRoot:(NSString *)cacheRoot
    ```
 
--  缓存区大小限制策略（文件个数限制、文件总大小限制)，目前这两种策略只能二选一，且策略在每次播放完成或者退出播放时生效。
-   
-   - 使用限制文件总大小的策略，默认使用的是该策略，且缓存大小为500M
+缓存区大小限制策略（文件个数限制、文件总大小限制)，目前这两种策略只能二选一，且策略在每次播放完成或者退出播放时生效。  
 
    ```objectivec
   -(void)setMaxCacheSizeLimited:(long long)maxCacheSize;
    ```
    
-   - 使用限制文件总个数的策略
+使用限制文件总个数的策略  
 
    ```objectivec
    -(void)setMaxFilesCountLimited:(NSInteger)maxFilesCount;
    ```
-
--  状态监听
-   
-   - KSYHTTPCache发生错误时的发送CacheErrorNotification通知
-
-   ```objectivec
-   CacheErrorNotification
-   ```
-   
-   - KSYHTTPCache缓存进度发送变化时发送CacheStatusNotification通知
-
-   ```objectivec
-   CacheStatusNotification
-  ```
-   
-   注册notification监听
-   ```objectivec
-   [[NSNotificationCenter defaultCenter] addObserver:self 
-               selector:@selector(mediaCacheDidChanged:)
-               name:CacheStatusNotification 
-               object:nil];
-   ```
-   去掉notification监听
-   ```objectivec
-   [[NSNotificationCenter defaultCenter] removeObserver:self
-                name:CacheStatusNotification
-                object:nil];
-    ```
-
-
 ## 4.其他接口说明
 
 
