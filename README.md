@@ -36,16 +36,20 @@ KSY HTTPCache相当于本地的代理服务，使用KSY HTTPCache后，播放器
 
 
 ## 3.下载和使用
-下载framework目录下的KSYHTTPCache.framework，并添加到工程中，然后添加CocoaAsyncSocket，CocoaLumberjack，KSYMediaPlayer_iOS.framework依赖库到工程；
+### 3.1 此demo的编译和运行  
+1. 使用git下载源码或者从release页面下载zipg格式压缩包后解码  
+2. 打开终端，进入demo目录  
+3. 执行`pod install`命令  
+4. 成功后使用xcode打开新生成的KSYHTTPCacheDemo.xcworkspace工程文件即可编译和运行  
 
-若使用cocoaPods，需要在pods文件中引入
-    pod 'KSYHTTPCache'
-    pod 'KSYMediaPlayer_iOS'
-    执行pod install命令即可
+### 3.2 SDK的下载和使用  
+#### 3.2.1 下载SDK
+本SDK依赖cocopads中的CocoaAsyncSocket，CocoaLumberjack两个库，建议使用pod的方式下载和使用。  
+在Podfile文件中添加以下语句，执行pod install之后即可将sdk添加入工程  
+`pod 'ksyhttpcache'`  
 
-若要使用【预缓存】功能，需要引入KSYFileDownloader，即#import <KSYHTTPCache/KSYFileDownloader.h>，可参考demo工程下的ShowFileDownloader类
-
-为了保证正常工作，推荐在AppDelegate中开启和关闭服务，如下:
+#### 3.2.2 使用SDK
+1. KSYHTTPProxyService类实现了本地HTTP代理，一般在appDelegate中将其启动即可  
 ```objectivec
 #import <KSYHTTPCache/KSYHTTPProxyService.h>
 
@@ -55,18 +59,10 @@ KSY HTTPCache相当于本地的代理服务，使用KSY HTTPCache后，播放器
     [[KSYHTTPProxyService sharedInstance] startServer];
     return YES;
 }
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    [[KSYHTTPProxyService sharedInstance] stopServer];
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    [[KSYHTTPProxyService sharedInstance] startServer];
-}
 
 ```
 
-proxy与播放器的集成如下所示，通过getProxyUrl接口获得代理播放地址，进行播放。
-
+2. 使用[getProxyUrl](https://ksvc.github.io/ksyhttpcache_ios/doc/html/Classes/KSYHTTPProxyService.html#//api/name/getProxyUrl:)方法获取原始URL经过本地HTTP代理后的URL，之后将代理URL传递给播放器即可实现在播放的同时将文件cache到本地    
 ```objectivec
 //get proxy url from ksyhttpcache
 NSString *proxyUrl = [[KSYHTTPProxyService sharedInstance] getProxyUrl:@"http://maichang.kssws.ks-cdn.com/upload20150716161913.mp4"];
@@ -77,6 +73,35 @@ KSYMoviePlayerController *player = [[KSYMoviePlayerController alloc] initWithCon
 //play the video
 [player prepareToPlay];
 ```
+
+
+3. 状态监听
+   
+   - KSYHTTPCache发生错误时的发送CacheErrorNotification通知
+
+   ```objectivec
+   CacheErrorNotification
+   ```
+   
+   - KSYHTTPCache缓存进度发送变化时发送CacheStatusNotification通知
+
+   ```objectivec
+   CacheStatusNotification
+  ```
+   
+   注册notification监听
+   ```objectivec
+   [[NSNotificationCenter defaultCenter] addObserver:self 
+               selector:@selector(mediaCacheDidChanged:)
+               name:CacheStatusNotification 
+               object:nil];
+   ```
+   去掉notification监听
+   ```objectivec
+   [[NSNotificationCenter defaultCenter] removeObserver:self
+                name:CacheStatusNotification
+                object:nil];
+    ```
 
 使用以上方法，proxy将采用默认配置。可采用如下方法自定义配置(需在startServer前设置)：
 
