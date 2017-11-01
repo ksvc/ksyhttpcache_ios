@@ -1,8 +1,9 @@
-# Uncomment this line to define a global platform for your project
-platform :ios, '8.0'
+platform :ios, '7.0'
+inhibit_all_warnings!
 
-target 'demo' do
+target 'KSYHTTPCacheDemo' do
+    pod 'Bugly'
+
+    pod 'ksyhttpcache',         :path => '../'
     pod 'KSYMediaPlayer_iOS'
-    pod 'ksyhttpcache'
 end
-

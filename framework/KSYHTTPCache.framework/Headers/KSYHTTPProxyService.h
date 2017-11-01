@@ -11,6 +11,20 @@
 
 @interface KSYHTTPProxyService : NSObject
 
+/**
+ * 设置是否忽略http url参数，YES时对于参数不用的URL作为同一个文件处理，为NO时当做不同文件处理
+ * @since Available in KSYHTTPCache 1.2.2 and later.
+ */
+@property(nonatomic, assign)BOOL ignoreURLParamter;
+
+/**
+ * 获取版本号
+ */
++(NSString*)getVersion;
+
+/**
+ * 获取唯一示例
+ */
 + (KSYHTTPProxyService*)sharedInstance;
 
 /**
@@ -139,3 +153,6 @@
 
 
 @end
+
+#define KSYHTTPCACHE_VER 1.2.2
+#define KSYHTTPCACHE_ID  39840a2b3d9af193aa4f6c591f4896f5362aa15b

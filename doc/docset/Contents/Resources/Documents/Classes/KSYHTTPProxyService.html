@@ -52,9 +52,17 @@
 
 	
 	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/ignoreURLParamter">ignoreURLParamter</option>
+		
+	</optgroup>
+	
 
 	
 	<optgroup label="Class Methods">
+		
+		<option value="//api/name/getVersion">+ getVersion</option>
 		
 		<option value="//api/name/sharedInstance">+ sharedInstance</option>
 		
@@ -152,6 +160,93 @@
 
 						<div class="task-list">
 							<div class="section-method">
+	<a name="//api/name/ignoreURLParamter" title="ignoreURLParamter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/ignoreURLParamter">&nbsp;&nbsp;ignoreURLParamter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置是否忽略http url参数，YES时对于参数不用的URL作为同一个文件处理，为NO时当做不同文件处理</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL ignoreURLParamter</code></div>
+
+		    
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>Available in KSYHTTPCache 1.2.2 and later.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYHTTPProxyService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getVersion" title="getVersion"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getVersion">+&nbsp;getVersion</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取版本号</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSString *)getVersion</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYHTTPProxyService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/sharedInstance" title="sharedInstance"></a>
 	<h3 class="method-title"><code><a href="#//api/name/sharedInstance">+&nbsp;sharedInstance</a></code>
 </h3>
@@ -161,10 +256,35 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>获取唯一示例</p>
+			</div>
+			
+		    
 
 			<div class="method-subsection method-declaration"><code>+ (KSYHTTPProxyService *)sharedInstance</code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYHTTPProxyService.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">

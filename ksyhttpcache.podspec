@@ -1,7 +1,6 @@
-
 Pod::Spec.new do |s|
   s.name         = 'ksyhttpcache'
-  s.version      = '1.2.1'
+  s.version      = '1.2.2'
   s.license      = {
 :type => 'Proprietary',
 :text => <<-LICENSE
@@ -17,7 +16,6 @@ Pod::Spec.new do |s|
   DESC
   s.platform     = :ios, '7.0'
   s.ios.deployment_target = '7.0'
-  
 
   s.requires_arc = true
   s.source       = { 
@@ -27,6 +25,4 @@ Pod::Spec.new do |s|
   s.dependency 'CocoaAsyncSocket'
   s.dependency 'CocoaLumberjack'
   s.vendored_frameworks = 'framework/KSYHTTPCache.framework'
-
-
 end

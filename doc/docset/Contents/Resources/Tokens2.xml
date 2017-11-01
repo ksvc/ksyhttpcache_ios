@@ -13,8 +13,56 @@
 		
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYHTTPProxyService/setIgnoreURLParamter:</TokenIdentifier>
+			<Abstract type="html">设置是否忽略http url参数，YES时对于参数不用的URL作为同一个文件处理，为NO时当做不同文件处理</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL ignoreURLParamter</Declaration>
+			
+			
+			<Anchor>//api/name/ignoreURLParamter</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KSYHTTPProxyService/ignoreURLParamter</TokenIdentifier>
+			<Abstract type="html">设置是否忽略http url参数，YES时对于参数不用的URL作为同一个文件处理，为NO时当做不同文件处理</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL ignoreURLParamter</Declaration>
+			
+			
+			<Anchor>//api/name/ignoreURLParamter</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/KSYHTTPProxyService/ignoreURLParamter</TokenIdentifier>
+			<Abstract type="html">设置是否忽略http url参数，YES时对于参数不用的URL作为同一个文件处理，为NO时当做不同文件处理</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL ignoreURLParamter</Declaration>
+			
+			
+			<Anchor>//api/name/ignoreURLParamter</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/KSYHTTPProxyService/getVersion</TokenIdentifier>
+			<Abstract type="html">获取版本号</Abstract>
+			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)getVersion</Declaration>
+			
+			
+			<Anchor>//api/name/getVersion</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/KSYHTTPProxyService/sharedInstance</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">获取唯一示例</Abstract>
 			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
 			
 			<Declaration>+ (KSYHTTPProxyService *)sharedInstance</Declaration>

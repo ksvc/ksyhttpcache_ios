@@ -87,6 +87,12 @@
                     <Anchor>tasks</Anchor>
                 </Node>
                 
+                <Node type="section">
+                    <Path>Classes/KSYHTTPProxyService.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
                 
                 <Node type="section">
                     <Path>Classes/KSYHTTPProxyService.html</Path>

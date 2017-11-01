@@ -1,6 +1,0 @@
-framework module KSYHTTPCache {
-  umbrella header "KSYHTTPCache.h"
-
-  export *
-  module * { export * }
-}
