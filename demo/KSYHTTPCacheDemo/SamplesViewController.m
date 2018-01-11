@@ -37,13 +37,6 @@ static NSString * const toBeDownloadUrlStr = @"https://mvvideo5.meitudata.com/57
     [self initTableView];
 }
 
--(NSMutableArray*)getNameAndProxyUrl:(NSString*)url {
-    NSMutableArray* array = [[NSMutableArray alloc] init];
-    [array addObject:[url lastPathComponent]];
-    [array addObject: [[KSYHTTPProxyService sharedInstance] getProxyUrl:url]];
-    return array;
-}
-
 -(NSMutableArray*)getNameAndUrl:(NSString*)url {
     NSMutableArray* array = [[NSMutableArray alloc] init];
     [array addObject:[url lastPathComponent]];
@@ -60,15 +53,13 @@ static NSString * const toBeDownloadUrlStr = @"https://mvvideo5.meitudata.com/57
 
 -(void)initTableView {
     NSMutableArray *sampleList = [[NSMutableArray alloc] init];
-    [sampleList addObject:[self getNameAndProxyUrl:@"http://ks3-cn-beijing.ksyun.com/mobile/S09E20.mp4"]];
-    
-    [sampleList addObject:[self getNameAndProxyUrl:@"http://lavaweb-10015286.video.myqcloud.com/hong-song-mei-gui-mu-2.mp4"]];
-    
-    [sampleList addObject:[self getNameAndProxyUrl:@"https://mvvideo5.meitudata.com/571090934cea5517.mp4"]];
-    [sampleList addObject:[self getNameAndProxyUrl:@"http://lavaweb-10015286.video.myqcloud.com/lava-guitar-creation-2.mp4"]];
-    [sampleList addObject:[self getNameAndProxyUrl:@"http://lavaweb-10015286.video.myqcloud.com/ideal-pick-2.mp4"]];
-    [sampleList addObject:[self getNameAndProxyUrl:@"http://120.25.226.186:32812/resources/videos/minion_01.mp4"]];
-    [sampleList addObject:[self getNameAndProxyUrl:@"http://120.25.226.186:32812/resources/videos/minion_04.mp4"]];
+    [sampleList addObject:[self getNameAndUrl:@"http://ks3-cn-beijing.ksyun.com/mobile/S09E20.mp4"]];
+    [sampleList addObject:[self getNameAndUrl:@"http://lavaweb-10015286.video.myqcloud.com/hong-song-mei-gui-mu-2.mp4"]];
+    [sampleList addObject:[self getNameAndUrl:@"https://mvvideo5.meitudata.com/571090934cea5517.mp4"]];
+    [sampleList addObject:[self getNameAndUrl:@"http://lavaweb-10015286.video.myqcloud.com/lava-guitar-creation-2.mp4"]];
+    [sampleList addObject:[self getNameAndUrl:@"http://lavaweb-10015286.video.myqcloud.com/ideal-pick-2.mp4"]];
+    [sampleList addObject:[self getNameAndUrl:@"http://120.25.226.186:32812/resources/videos/minion_01.mp4"]];
+    [sampleList addObject:[self getNameAndUrl:@"http://120.25.226.186:32812/resources/videos/minion_04.mp4"]];
     self.sampleList_withhttpcache = sampleList;
     
     NSMutableArray *sampleList2 = [[NSMutableArray alloc] init];
@@ -187,18 +178,9 @@ static NSString * const toBeDownloadUrlStr = @"https://mvvideo5.meitudata.com/57
     }
     
     if (section == 0) {
-        NSString *local = @"http://127.0.0.1:8123/";
-        NSString *originalUrlStr = nil;
         NSString *httpServerUrlStr = [item[1] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        if (httpServerUrlStr.length > [local length]) {
-            originalUrlStr = [httpServerUrlStr substringFromIndex:local.length];
-        }
-        if (![originalUrlStr hasPrefix:@"http://"] && ![originalUrlStr hasPrefix:@"https://"]) {
-            return;
-        }
-        
         __weak typeof(self) weakSelf = self;
-        [self.downloaderManager showDownloaderHandlerForUrl:originalUrlStr onViewController:self progressBlock:^(float progress) {
+        [self.downloaderManager showDownloaderHandlerForUrl:httpServerUrlStr onViewController:self progressBlock:^(float progress) {
             UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
             UILabel *progressLab = [cell.contentView viewWithTag:100021];
             if ((NSInteger)(progress * 10000) > 10000) {
@@ -207,7 +189,8 @@ static NSString * const toBeDownloadUrlStr = @"https://mvvideo5.meitudata.com/57
             progressLab.text = [NSString stringWithFormat:@"%f", progress];
         } playerBlock:^{
             __strong typeof(weakSelf) strongSelf = weakSelf;
-            [strongSelf presentViewController:[[KSYPlayerVC alloc] initWithURL:[NSURL URLWithString:httpServerUrlStr]] animated:YES completion:nil];
+            NSString* proxyUrlString = [[KSYHTTPProxyService sharedInstance]getProxyUrl:httpServerUrlStr];
+            [strongSelf presentViewController:[[KSYPlayerVC alloc] initWithURL:[NSURL URLWithString:proxyUrlString]] animated:YES completion:nil];
         }];
     } else {
         NSURL   *url  = [NSURL URLWithString:[item[1] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];

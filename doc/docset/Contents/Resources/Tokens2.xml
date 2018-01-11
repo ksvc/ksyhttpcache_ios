@@ -187,7 +187,7 @@
 			<Abstract type="html">启动server</Abstract>
 			<DeclaredIn>KSYHTTPProxyService.h</DeclaredIn>
 			
-			<Declaration>- (void)startServer</Declaration>
+			<Declaration>- (BOOL)startServer</Declaration>
 			
 			
 			<Anchor>//api/name/startServer</Anchor>

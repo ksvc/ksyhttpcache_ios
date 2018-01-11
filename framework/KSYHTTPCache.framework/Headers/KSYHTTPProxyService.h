@@ -78,7 +78,7 @@
 /**
  * 启动server
  */
-- (void)startServer;
+- (BOOL)startServer;
 
 /**
  * 关闭server
@@ -154,5 +154,5 @@
 
 @end
 
-#define KSYHTTPCACHE_VER 1.2.2
-#define KSYHTTPCACHE_ID  39840a2b3d9af193aa4f6c591f4896f5362aa15b
+#define KSYHTTPCACHE_VER 1.2.3
+#define KSYHTTPCACHE_ID  5cf9e18d38ee70a735c8804329dec42b01d02396

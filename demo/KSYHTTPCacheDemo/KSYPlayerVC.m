@@ -495,25 +495,6 @@
         NSLog(@"logJson is %@",logJson);
     };
     
-#if 0
-    _player.videoDataBlock = ^(CMSampleBufferRef sampleBuffer){
-        CMItemCount count;
-        CMSampleTimingInfo timing_info;
-        OSErr ret = CMSampleBufferGetOutputSampleTimingInfoArray(sampleBuffer, 1, &timing_info, &count);
-        if ( ret == noErr) {
-            NSLog(@"video Pts %d %lld",  timing_info.presentationTimeStamp.timescale, timing_info.presentationTimeStamp.value );
-        }
-    };
-    
-    _player.audioDataBlock = ^(CMSampleBufferRef sampleBuffer){
-        CMItemCount count;
-        CMSampleTimingInfo timing_info;
-        OSErr ret = CMSampleBufferGetOutputSampleTimingInfoArray(sampleBuffer, 1, &timing_info, &count);
-        if ( ret == noErr) {
-            NSLog(@"audio Pts %d %lld",  timing_info.presentationTimeStamp.timescale, timing_info.presentationTimeStamp.value );
-        }
-    };
-#endif
     stat.text = [NSString stringWithFormat:@"url %@", aURL];
     _player.controlStyle = MPMovieControlStyleNone;
     [_player.view setFrame: videoView.bounds];  // player's frame must match parent's
