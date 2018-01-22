@@ -7,7 +7,8 @@
 [![CocoaPods version](https://img.shields.io/cocoapods/v/ksyhttpcache.svg)](https://cocoapods.org/pods/ksyhttpcache)
 [![CocoaPods platform](https://img.shields.io/cocoapods/p/ksyhttpcache.svg)](https://cocoapods.org/pods/ksyhttpcache)
 
-
+<pre>Source Type:<b> Binary SDK</b>
+Charge Type:<b> free of charge</b></pre>
 
 金山云iOS平台http缓存SDK，可方便地与播放器集成，实现http视频边播放边下载（缓存）功能。ksyun http cache sdk for ios platform, it's easy to integrated with media players to provide caching capability when watching http videos.
 
@@ -18,6 +19,16 @@ KSY HTTPCache与播放器及视频服务器的关系如下图：
 ![](https://github.com/sujia/image_foder/blob/master/ksy_http_cache.png)
 
 KSY HTTPCache相当于本地的代理服务，使用KSY HTTPCache后，播放器不直接请求视频服务器，而是向KSY HTTPCache请求数据。KSY HTTPCache在代理HTTP请求的同时，缓存视频数据到本地。
+
+### 1.1 关于热更新
+
+金山云SDK保证，提供的[HTTP Cache SDK](https://github.com/ksvc/ksyhttpcache_ios)未使用热更新技术，例如：RN(ReactNative)、weex、JSPatch等，请放心使用。
+
+### 1.2 关于费用
+金山云SDK保证，提供的[HTTP Cache SDK](https://github.com/ksvc/ksyhttpcache_ios)可以用于商业应用，不会收取任何SDK使用费用。
+
+### 1.3 License
+详情请见[License](LICENSE)文件。
 
 ## 2.功能说明
 它可以很方便的和播放器进行集成，提供以下功能：
